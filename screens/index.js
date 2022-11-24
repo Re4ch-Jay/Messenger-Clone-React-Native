@@ -5,5 +5,6 @@ import People from './People'
 import Settings from './Settings'
 import Stories from './Stories'
 import Profile from './Profile'
-
-export {Calls, Chats, People, Settings, Stories, Chat, Profile}
+import Menu from './Menu'
+    
+export {Calls, Chats, People, Settings, Stories, Chat, Profile, Menu}

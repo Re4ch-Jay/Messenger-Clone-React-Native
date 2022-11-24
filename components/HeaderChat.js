@@ -1,10 +1,11 @@
-import { View, Text, TextInput,  } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity,  } from 'react-native'
 import React from 'react'
 import {SIZES, FONTS, COLORS} from '../constants'
 import { MaterialIcons } from '@expo/vector-icons'; 
 import { Feather } from '@expo/vector-icons'; 
+import { useNavigation } from '@react-navigation/native';
 const HeaderChat = () => {
-    
+    const navigation = useNavigation()
   return (
     <View>
         <View style={{
@@ -12,7 +13,9 @@ const HeaderChat = () => {
             justifyContent: 'space-between',
             alignItems: 'center',
         }}>
-            <MaterialIcons name="menu" size={24} color={COLORS.primary} />
+            <TouchableOpacity onPress={() => navigation.navigate('menu')}>
+                <MaterialIcons name="menu" size={24} color={COLORS.primary} />
+            </TouchableOpacity>
             <Text style={{
                 fontFamily: FONTS.bold,
                 fontSize: SIZES.xl,

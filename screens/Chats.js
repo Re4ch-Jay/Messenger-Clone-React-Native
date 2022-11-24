@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, View, Text, TouchableOpacity } from 'react-native'
+import {Keyboard, Image, SafeAreaView, View, Text, TouchableOpacity, TouchableWithoutFeedback } from 'react-native'
 import React from 'react'
 import FocusedStatusBar from '../components/FocusedStatusBar'
 import HeaderChat from '../components/HeaderChat'
@@ -11,10 +11,12 @@ import { useNavigation } from '@react-navigation/native'
 const Chats = () => {
   const navigation = useNavigation()
   return (
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
     <SafeAreaView style={{
       flex: 1,
       margin: SIZES.l
     }}>
+      
       <FocusedStatusBar/>
       <HeaderChat/>
         <FlatList 
@@ -69,8 +71,8 @@ const Chats = () => {
           </TouchableOpacity>
         )}
         /> 
-      
     </SafeAreaView>
+    </TouchableWithoutFeedback>
   )
 }
 

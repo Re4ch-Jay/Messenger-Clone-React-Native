@@ -1,6 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { Chat, Chats, Profile } from '../screens';
+import Menu from '../screens/Menu';
 
 const Stack = createStackNavigator()
 export default function ChatsStack() {
@@ -16,6 +17,10 @@ export default function ChatsStack() {
           />
           <Stack.Screen name="profile"
             component={Profile} 
+            options={{headerShown: false}}
+          />
+          <Stack.Screen name="menu"
+            component={Menu} 
             options={{headerShown: false}}
           />
       </Stack.Navigator>
