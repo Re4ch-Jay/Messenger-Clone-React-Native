@@ -1,7 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import {SIZES, FONTS, COLORS} from '../constants'
-import { MaterialIcons } from '@expo/vector-icons'; 
+import {SIZES, FONTS } from '../constants'
 const HeaderCalls = ({title, icon, justifyContent}) => {
   return (
     <View>

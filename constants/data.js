@@ -8,7 +8,8 @@ const chatData = [
         message: 'Hello John',
         time: "2:24 PM",
         image: assets.person01,
-        story: assets.story01
+        story: assets.story01,
+        lastCall: 'Monday',
     },
     {
         id: '2',
@@ -16,39 +17,44 @@ const chatData = [
         message: 'What are you doing',
         time: "2:24 PM",
         image: assets.person02,
-        story: assets.story02
+        story: assets.story02,
+        lastCall: 'Tuesday',
     },
     {
         id: '3',
         name: 'Putri Intan',
         message: 'Help me with this assigments',
-        time: "2:24 PM",
+        time: "8:24 PM",
         image: assets.person03,
-        story: assets.story03
+        story: assets.story03,
+        lastCall: 'Tuesday',
     },
     {
         id: '4',
         name: 'Siti Nurhaliza',
         message: 'yooooo',
-        time: "2:24 PM",
+        time: "11:24 AM",
         image: assets.person04,
-        story: assets.story04
+        story: assets.story04,
+        lastCall: 'Wednesday',
     },
     {
         id: '5',
         name: 'Putri Intan',
         message: 'Bye bye',
-        time: "2:24 PM",
+        time: "4:04 PM",
         image: assets.person03,
-        story: assets.story05
+        story: assets.story05,
+        lastCall: 'Friday',
     },
     {
         id: '6',
         name: 'Siti Nurhaliza',
         message: 'HiiiI!',
-        time: "2:24 PM",
+        time: "1:04 PM",
         image: assets.person04,
         story: assets.story06,
+        lastCall: 'Saturday',
     },
     {
         id: '7',
@@ -56,7 +62,8 @@ const chatData = [
         message: 'You sent a voice message.',
         time: "2:24 PM",
         image: assets.person03,
-        story: assets.story03
+        story: assets.story03,
+        lastCall: 'Wednesday',
     },
     {
         id: '8',
@@ -64,7 +71,8 @@ const chatData = [
         message: 'Thank you',
         time: "2:24 PM",
         image: assets.person04,
-        story: assets.story02
+        story: assets.story02,
+        lastCall: 'Sunday',
     },
     {
         id: '9',
@@ -73,6 +81,7 @@ const chatData = [
         time: "2:24 PM",
         image: assets.person03,
         story: assets.story01,
+        lastCall: 'Sunday',
     },
     {
         id: '10',
@@ -80,30 +89,10 @@ const chatData = [
         message: 'Hello Jack',
         time: "2:24 PM",
         image: assets.person04,
-        story: assets.story06
+        story: assets.story06,
+        lastCall: 'Thursday',
     }
 ]
 
 export {chatData}
 
-const CreateCall = () => {
-    return (
-        
-    <View style={{
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center'
-    }}>
-        <View style={{
-            borderRadius: 100,
-            backgroundColor: COLORS.gray,
-            padding: SIZES.s,
-            marginRight: SIZES.m,
-        }}>
-            <MaterialIcons name="video-call" size={30} color="black" />
-            
-        </View>
-        <Text style={{fontSize: SIZES.xs, marginRight: SIZES.m}}>Create Call</Text>
-    </View>
-    )
-}

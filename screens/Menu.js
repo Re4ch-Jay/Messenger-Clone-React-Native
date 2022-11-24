@@ -12,7 +12,7 @@ const Menu = () => {
       <HeaderCalls title="All Chats" justifyContent='center' />
       <ScrollView>
         <GroupCard onPress={() => navigation.goBack()} iconOne='chat' iconTwo="office-building" iconThree='archive'
-        textOne='Chats' textTwo='Makretplace' textThree='Archive'
+        textOne='Chats' textTwo='Marketplace' textThree='Archive'
         />
         <View style={{
           flexDirection: 'row',

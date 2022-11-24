@@ -5,6 +5,7 @@ import {chatData} from '../constants'
 import HeaderCalls from '../components/HeaderCalls'
 import {SIZES, FONTS, COLORS, assets} from '../constants'
 import { MaterialIcons } from '@expo/vector-icons'; 
+import ImageComp from '../components/ImageComp'
 const Calls = ({route, navigation}) => {
 
   const handleAlert = (name) => {
@@ -29,32 +30,16 @@ const Calls = ({route, navigation}) => {
           }}>
             <TouchableOpacity onPress={() => handleAlert(item.name)}>
               <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-              <View style={{ width: 50, height: 50, marginVertical: SIZES.s }}>
-                  <Image
-                    source={item.image}
-                    resizeMode="contain"
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <Image
-                    source={assets.badge}
-                    resizeMode="contain"
-                    style={{
-                      position: "absolute",
-                      width: 15,
-                      height: 15,
-                      bottom: 0,
-                      right: 0,
-                    }}
-                  />
-                </View>
+                <ImageComp image={item.image} width={50} height={50} marginVertical={SIZES.s} />
                 <View style={{
                   flexDirection: 'column',
                   justifyContent: 'center',
-                  alignItems: 'flex-start'
+                  alignItems: 'flex-start',
+                  marginLeft: SIZES.m
                 }}>
                   
                   <Text>{item.name}</Text>
-                  <Text>Incomming Call - Sunday</Text>
+                  <Text>Incomming Call - {item.lastCall} at {item.time}</Text>
                 </View>
                 <View style={{marginRight: SIZES.xl * 4}}></View>
                 <TouchableOpacity onPress={() => navigation.navigate('profile', item)}>

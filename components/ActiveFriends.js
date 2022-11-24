@@ -5,6 +5,7 @@ import {SIZES, COLORS, assets} from '../constants'
 import { ScrollView } from 'react-native-gesture-handler';
 import {chatData} from '../constants'
 import { useNavigation } from '@react-navigation/native';
+import ImageComp from './ImageComp';
 
 const ActiveFriends = () => {
     const navigation = useNavigation()
@@ -41,23 +42,7 @@ const ActiveFriends = () => {
                         justifyContent: 'center'
                     }}>
                         <TouchableOpacity onPress={() => navigation.navigate('chat', item)}>
-                        <View style={{width: 60, height: 60}}>
-                            <Image source={item.image} style={{
-                            width: '100%',
-                            height: '100%'
-                            }} />
-                            <Image
-                                source={assets.badge}
-                                resizeMode="contain"
-                                style={{
-                                    position: "absolute",
-                                    width: 15,
-                                    height: 15,
-                                    bottom: 0,
-                                    right: 0,
-                                }}
-                            />
-                            </View>
+                            <ImageComp image={item.image} height={60} width={60} />
                         </TouchableOpacity>
                         <Text style={{marginRight: SIZES.m}}>{item.name}</Text>
                     </View>

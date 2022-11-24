@@ -1,13 +1,13 @@
-import {Keyboard, Image, SafeAreaView, View, Text, TouchableOpacity, TouchableWithoutFeedback } from 'react-native'
+import {Keyboard, SafeAreaView, View, Text, TouchableOpacity, TouchableWithoutFeedback } from 'react-native'
 import React from 'react'
 import FocusedStatusBar from '../components/FocusedStatusBar'
 import HeaderChat from '../components/HeaderChat'
 import ActiveFriends from '../components/ActiveFriends'
-import {SIZES, FONTS, COLORS, assets} from '../constants'
+import {SIZES, FONTS} from '../constants'
 import { FlatList } from 'react-native-gesture-handler'
 import {chatData} from '../constants'
 import { useNavigation } from '@react-navigation/native'
-
+import ImageComp from '../components/ImageComp'
 const Chats = () => {
   const navigation = useNavigation()
   return (
@@ -34,23 +34,9 @@ const Chats = () => {
                 justifyContent: 'flex-start',
                 alignItems: 'center'
               }}>
-                <View style={{width: 60, height: 60}}>
-                <Image source={item.image} style={{
-                  width: '100%',
-                  height: '100%'
-                }} />
-                <Image
-                    source={assets.badge}
-                    resizeMode="contain"
-                    style={{
-                      position: "absolute",
-                      width: 15,
-                      height: 15,
-                      bottom: 0,
-                      right: 0,
-                    }}
-                  />
-                </View>
+
+                <ImageComp image={item.image} width={60} height={60} />
+              
                 <View style={{flexDirection: 'column'}}>
                   <Text style={{
                     paddingHorizontal: SIZES.m,

@@ -1,9 +1,10 @@
 import { View, Text, Image, SafeAreaView, TouchableOpacity, TextInput, ScrollView } from 'react-native'
 import React from 'react'
-import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'; 
+import { Ionicons } from '@expo/vector-icons'; 
 import { COLORS, SIZES, FONTS } from "../constants";
 import { MaterialIcons } from '@expo/vector-icons'; 
 import { AntDesign } from '@expo/vector-icons'; 
+import ImageComp from '../components/ImageComp';
 
 const Chat = ({route, navigation}) => {
 
@@ -20,13 +21,15 @@ const Chat = ({route, navigation}) => {
           <MessageComp message={"Hiii"} image={{}} flexStart={'flex-end'} />
           <MessageComp message={"Im reading....."} image={{}} flexStart={'flex-end'} />
           <MessageComp message={message} image={image} flexStart={'flex-start'} />
-          <MessageComp message={"What are you doing"} image={image} flexStart={'flex-start'} />
-          <MessageComp message={"Hiii"} image={{}} flexStart={'flex-end'} />
+          <MessageComp message={"Eat rice yet"} image={image} flexStart={'flex-start'} /> 
           <MessageComp message={"Im reading....."} image={{}} flexStart={'flex-end'} />
           <MessageComp message={message} image={image} flexStart={'flex-start'} />
           <MessageComp message={"What are you doing"} image={image} flexStart={'flex-start'} />
           <MessageComp message={"Hiii"} image={{}} flexStart={'flex-end'} />
-          <MessageComp message={"Im reading....."} image={{}} flexStart={'flex-end'} />
+          <MessageComp message={"hahaha"} image={{}} flexStart={'flex-end'} />
+          <MessageComp message={message} image={image} flexStart={'flex-start'} />
+          <MessageComp message={"What are you doing"} image={image} flexStart={'flex-start'} />
+          <MessageComp message={"Ohh this app is real good"} image={{}} flexStart={'flex-end'} />
         </View>
       </ScrollView>
       <SendMessage />
@@ -45,7 +48,7 @@ const ChatHeader = ({name, image, navigation}) => {
           <Ionicons name="ios-chevron-back-sharp" size={24} color={COLORS.primary} style={{paddingRight: SIZES.m}} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("profile", {image, name})} style={{flexDirection: 'row', alignItems: 'center'}}>
-            <Image source={image} style={{width: 48, height: 48}} />
+            <ImageComp image={image} height={48} width={48} />
             <View style={{paddingHorizontal: SIZES.m - 5}}>
               <Text style={{fontFamily: FONTS.medium}}>{name}</Text>
               <Text style={{fontFamily: FONTS.light, color: COLORS.secondary}}>Active now</Text>
