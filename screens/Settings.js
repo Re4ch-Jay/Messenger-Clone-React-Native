@@ -24,12 +24,19 @@ const Settings = () => {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <Image 
-        source={assets.person01} 
-        resizeMode='contain' 
-        style={{width: 100, height: 100}} />
+        <View>
+          <Image 
+          source={assets.person01} 
+          resizeMode='contain' 
+          style={{width: 100, height: 100}} />
+          <Image source={assets.badge}
+          resizeMode='contain'
+          style={{width: 30, height: 30, bottom: 30, left: 70}}
+          />
+
+        </View>
         <Text style={{
-        marginVertical: SIZES.xl,
+        marginBottom: SIZES.xl,
         fontFamily: FONTS.bold,
         fontSize: SIZES.xl * 1.2,
         textAlign: 'center'

@@ -50,8 +50,8 @@ const App = () => {
         
       })}
       >
-        <Tab.Screen name='chatsStack' component={ChatsStack} options={hideBottomBar} />
-        <Tab.Screen name='callsStack' component={CallsStack} options={hideBottomBar}/>
+        <Tab.Screen name='chatsStack' component={ChatsStack} options={hideBottomBarChats} />
+        <Tab.Screen name='callsStack' component={CallsStack} options={hideBottomBarCalls}/>
         <Tab.Screen name='people' component={People} options={{title: "People"}} />
         <Tab.Screen name='stories' component={Stories} options={{title: "Stories"}} />
         <Tab.Screen name='settings' component={Settings} options={{title: "Settings"}} />
@@ -63,14 +63,29 @@ const App = () => {
 
 export default App;
 
-const hideBottomBar = ({ route }) => ({
-  title: 'Chats', 
+const hideBottomBarChats = ({ route }) => ({
+  title: 'Chats',
   tabBarStyle: ((route) => {
     const routeName = getFocusedRouteNameFromRoute(route) ?? ''
     console.log(routeName)
     if (routeName === 'chat' || routeName === 'profile') {
       return { display: "none" }
+
     }
     return 
   })(route),
 })
+
+const hideBottomBarCalls = ({ route }) => ({
+  title: 'Calls',
+  tabBarStyle: ((route) => {
+    const routeName = getFocusedRouteNameFromRoute(route) ?? ''
+    console.log(routeName)
+    if (routeName === 'chat' || routeName === 'profile') {
+      return { display: "none" }
+
+    }
+    return 
+  })(route),
+})
+

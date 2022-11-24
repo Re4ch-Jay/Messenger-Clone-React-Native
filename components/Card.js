@@ -42,7 +42,8 @@ export const GroupCard = ({iconOne, iconTwo, iconThree, textOne, textTwo, textTh
         backgroundColor: "#fff",
         paddingHorizontal: SIZES.m,
         paddingBottom: SIZES.m,
-        marginVertical: SIZES.m
+        marginVertical: SIZES.m,
+        borderRadius: SIZES.m
         
     }}>
           <View>
