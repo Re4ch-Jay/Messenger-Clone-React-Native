@@ -22,7 +22,7 @@ To run in development sever
 npm start
 ``
 
-Download expo on your phone through App Store or Google Play to view the development on your physical phone or using emulator to view on your PC.
+Download Expo App on your phone through App Store or Google Play to view the development on your physical phone or using emulator to view on your PC.
 
 
 
